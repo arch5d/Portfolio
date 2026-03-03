@@ -1,4 +1,15 @@
-export const projects = [
+export type Project = {
+  slug: string
+  title: string
+  description: string
+  tech: string[]
+  github: string
+  problem?: string
+  approach?: string
+  architecture?: string
+  learnings?: string
+}
+export const projects: Project[] = [
   {
     slug: 'backbuddy',
     title: 'BackBuddy',
