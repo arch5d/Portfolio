@@ -19,7 +19,7 @@ export default function CreativePage() {
         <div className="mt-2 flex flex-col gap-2 text-accent">
           <a href="https://www.bandlab.com/" target="_blank">BandLab: architamt@bndlb.com</a>
           <a href="https://soundtrap.com/" target="_blank">Soundtrap: architamt@soundtrap.com</a>
-          <a href="https://instagram.com/architadayal" target="_blank">Instagram (personal): @architadayal</a>
+          <a href="https://instagram.com/architadayal" target="_blank">Instagram(personal): @architadayal</a>
           <a href="https://instagram.com/_maenka" target="_blank">Maenka: @_maenka</a>
         </div>
       </section>
