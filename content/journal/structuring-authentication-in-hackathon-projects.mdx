@@ -1,0 +1,59 @@
+---
+title: "Structuring Authentication in Hackathon Projects"
+description: "How to ship secure auth quickly without sacrificing product velocity in short builds."
+category: "Security"
+date: "2026-01-27"
+readingTime: "6 min read"
+---
+
+Hackathons reward speed, but rushed authentication is one of the most common weak points in student projects. I used to treat auth as a late-stage feature, and every time, it created bugs and risky shortcuts. Now I build authentication as day-one infrastructure.
+
+## Decide your threat model early
+
+You do not need enterprise complexity in a 48-hour build, but you should still define likely risks:
+
+- account takeover through weak passwords
+- token theft via browser storage
+- privilege escalation by missing route checks
+
+Writing these down early helps prioritize security controls.
+
+## Favor secure defaults
+
+My current baseline looks like this:
+
+- Passwords hashed with bcrypt or argon2
+- Short-lived access token + refresh token rotation
+- HttpOnly cookies for session transport
+- CSRF protection on state-changing routes
+- Role checks in middleware, not only in UI
+
+These choices are small but prevent the most frequent failures.
+
+## Keep auth boundaries clean
+
+A frequent mistake is spreading auth logic across UI components. I now isolate it in three places:
+
+1. API routes for sign-up/sign-in/session refresh
+2. middleware for route access control
+3. client hooks for session state
+
+This separation improves both speed and correctness.
+
+## Avoid hidden coupling
+
+If your project has teams working in parallel, define auth contracts in plain language and types. For example:
+
+- what claims exist in tokens
+- what roles can call each endpoint
+- what error format is returned
+
+Shared contracts prevent integration chaos near submission time.
+
+## Add an audit trail
+
+Even in hackathon projects, basic event logging is useful. I record login attempts, refresh failures, and permission denials. These logs help diagnose issues quickly during demo day.
+
+## Final note
+
+Good authentication is not about building the most complex stack. It is about reducing avoidable risk while preserving momentum. A minimal, structured auth layer creates confidence and saves time when pressure is highest.
