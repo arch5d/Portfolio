@@ -1,54 +1,32 @@
 export const projects = [
   {
-    slug: 'agent-orchestration-lab',
-    title: 'Agent Orchestration Lab',
-    description: 'A modular sandbox for running multi-agent task pipelines with traceable decision graphs.',
-    tech: ['Next.js', 'TypeScript', 'LLM APIs', 'Redis'],
-    github: 'https://github.com/arch5d',
-    problem: 'Testing prompt chains at scale is messy without observability.',
-    approach: 'Built an orchestration layer with reusable agent roles and logging hooks.',
-    architecture: 'Client UI → API routes → agent coordinator → vector memory store.',
-    learnings: 'Strong schema validation matters more than prompt cleverness.'
+    slug: 'backbuddy',
+    title: 'BackBuddy',
+    description: 'Posture and back health assistant application focused on user habit correction and awareness.',
+    tech: ['React', 'TypeScript'],
+    github: 'https://github.com/arch5d/backbuddy'
   },
   {
-    slug: 'secure-auth-blueprint',
-    title: 'Secure Auth Blueprint',
-    description: 'Reference implementation for hackathon-ready auth with role scopes and audit events.',
-    tech: ['Node.js', 'JWT', 'PostgreSQL', 'Zod'],
-    github: 'https://github.com/arch5d',
-    problem: 'Hackathon apps often ship insecure and brittle login flows.',
-    approach: 'Designed secure defaults with refresh-token rotation and route guard middleware.',
-    architecture: 'Auth service + DB sessions + signed token layer + frontend guards.',
-    learnings: 'Security is easiest when modeled early in the data schema.'
+    slug: 'ai-content-verifier',
+    title: 'AI Content Verifier',
+    description: 'AI-powered verification tool to detect manipulated or AI-generated content.',
+    tech: ['Python', 'TensorFlow'],
+    github: 'https://github.com/arch5d/ai-content-verifier'
   },
   {
-    slug: 'threat-monitor-lite',
-    title: 'Threat Monitor Lite',
-    description: 'A lightweight dashboard for parsing logs and spotting suspicious activity patterns.',
-    tech: ['Python', 'FastAPI', 'Tailwind', 'SQLite'],
-    github: 'https://github.com/arch5d',
-    problem: 'Raw log files make anomaly review tedious for small teams.',
-    approach: 'Created parser jobs and signal scoring heuristics for quick triage.',
-    architecture: 'Collector jobs → scoring engine → dashboard widgets and filters.',
-    learnings: 'Simple risk rules with strong UX outperform opaque ML early on.'
-  },
-  {
-    slug: 'web3-identity-prototype',
-    title: 'Web3 Identity Prototype',
-    description: 'Prototype for wallet-linked identity attestations across student communities.',
-    tech: ['Solidity', 'Hardhat', 'React', 'Ethers.js'],
-    github: 'https://github.com/arch5d',
-    problem: 'Community credentials are fragmented across platforms.',
-    approach: 'Built smart-contract attestations with a minimal verification portal.',
-    architecture: 'Contract layer + signer service + frontend verification app.',
-    learnings: 'On-chain trust requires excellent off-chain UX for adoption.'
+    slug: 'crime-rate-analysis',
+    title: 'Crime Rate Analysis',
+    description: 'Data-driven crime trend analysis and visualization system using structured datasets.',
+    tech: ['Python', 'Pandas', 'D3.js'],
+    github: 'https://github.com/arch5d/crime-rate-analysis'
   }
 ];
 
 export const skills = {
+  'Web Development': ['React.js', 'JavaScript', 'Next.js', 'Tailwind CSS'],
+  'Full Stack Development': ['React.js', 'JavaScript', 'Node.js', 'REST APIs', 'Databases'],
   'AI & Intelligent Systems': ['LLM workflows', 'Prompt architecture', 'Evaluation loops', 'Retrieval pipelines'],
   'Cybersecurity & Systems': ['Authentication design', 'Threat modeling', 'Security baselines', 'API hardening'],
-  'Web & Full Stack': ['Next.js', 'TypeScript', 'REST APIs', 'Databases', 'Responsive UI'],
   'Blockchain / Web3': ['Smart contracts', 'Wallet integrations', 'DApp UX', 'On-chain identity']
 };
 
@@ -76,5 +54,18 @@ export const journalPosts = [
     category: 'Builder Mindset',
     date: '2026-01-10',
     readingTime: '5 min read'
+  }
+];
+
+export const experiments = [
+  {
+    slug: 'bizpilot-ai',
+    title: 'BizPilot AI',
+    description: 'Multi-agent AI business automation system including marketing, finance, and operations agents.'
+  },
+  {
+    slug: 'trustlayer',
+    title: 'TrustLayer',
+    description: 'Hackathon security tool detecting fake domains, phishing emails, deepfakes, and AI-generated threats.'
   }
 ];

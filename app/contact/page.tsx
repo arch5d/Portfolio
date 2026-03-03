@@ -6,9 +6,9 @@ export default function ContactPage() {
       <ul className="space-y-3 rounded-mdx border border-black/5 bg-white p-6 shadow-card">
         <li>Email: <a className="text-accent" href="mailto:architadayal05@gmail.com">architadayal05@gmail.com</a></li>
         <li>GitHub: <a className="text-accent" href="https://github.com/arch5d">github.com/arch5d</a></li>
-        <li>LinkedIn: <span className="text-muted">(placeholder)</span></li>
-        <li>Twitter/X: <span className="text-muted">(placeholder)</span></li>
-        <li>Instagram: <a className="text-accent" href="https://instagram.com/_maenka">@_maenka</a></li>
+        <li>LinkedIn: <a className="text-accent" href="https://www.linkedin.com/in/archita-dayal-010676313/">linkedin.com/in/archita-dayal-010676313</a></li>
+        <li>Twitter/X: <a className="text-accent" href="https://x.com/DayalArchita">@DayalArchita</a></li>
+        <li>Instagram: <a className="text-accent" href="https://instagram.com/architadayal">@architadayal</a></li>
       </ul>
     </div>
   );

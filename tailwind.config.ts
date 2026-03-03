@@ -11,7 +11,8 @@ const config: Config = {
         muted: '#6B7280'
       },
       boxShadow: {
-        card: '0 8px 24px rgba(31, 31, 31, 0.06)'
+        card: '0 8px 24px rgba(31, 31, 31, 0.06)',
+        glow: '0 0 12px rgba(14,165,164,0.3)'
       },
       borderRadius: {
         mdx: '14px'

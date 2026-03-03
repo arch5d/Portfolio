@@ -20,3 +20,16 @@ body {
 .prose pre {
   @apply overflow-x-auto rounded-mdx bg-[#f3f4f6] p-4;
 }
+
+/* hero portrait fade mask */
+.hero-portrait {
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  mask-mode: alpha;
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-mode: alpha;
+}
+
+/* subtle glow shadow used on cards */
+.shadow-glow {
+  box-shadow: 0 0 12px rgba(14,165,164,0.3);
+}
